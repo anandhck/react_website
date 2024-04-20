@@ -1,0 +1,33 @@
+/* img center  */
+.t_section_img{
+display: flex;
+justify-content: center;
+align-items: flex-start;
+margin-left: -10rem;
+}
+.t_section_img img{
+height: 35rem;
+}
+.topics_box h3{
+color: #02D2FF !important;
+font-size: calc(0.5rem + 1rem);
+margin-bottom: 0;
+margin-left: 10px;
+font-size: large;
+}
+.topics_box_bg{
+background-color: #263238;
+padding: 3px;
+}
+.topics_box p{
+font-size: clamp(1.0625rem, 1rem, 0.1rem) !important;
+margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 767px) {
+.m_view_change{
+flex-direction: column-reverse;
+
+}
+}

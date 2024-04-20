@@ -1,0 +1,10 @@
+.sersoftbg::before{
+background-image: url("../../../../../assets/Services/Software/bg.png");
+  content: "";
+  position: fixed;
+width: 100%;
+height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

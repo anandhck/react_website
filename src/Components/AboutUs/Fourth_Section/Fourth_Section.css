@@ -1,0 +1,12 @@
+.abt_text_lt p{
+color: black !important;
+}
+.Fourth_img_style img {
+  margin: 0; /* Remove all margins */
+}
+
+/* Or */
+
+.Fourth_img_style {
+  margin: 0; /* Remove margin from the container */
+}

@@ -1,0 +1,434 @@
+
+/* color variables */
+
+:root {
+    --color-White: #ffffff;
+    --yellow-color: #D3DD63;
+    --yellow-glow-color: 211, 221, 99;
+    --violet-glow-color: 221, 99, 209;
+    --violet-color: #DD63D1;
+    --green-color: #74DD63;
+    --green-glow-color: 116, 221, 99;
+    --light-red-color: #EB6666;
+    --light-red-glow-color: 235, 102, 102;
+    --black-color: 0, 0, 0;
+}
+
+/* circle animation*/
+.circle_section {
+    position: fixed;
+    top: -76px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+}
+
+.circle {
+    position: absolute;
+    border: 3px solid;
+    color: var(--color-White);
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+
+/* circle hight & position */
+
+.big-circle {
+    width: 47rem;
+    height: 47rem;
+    animation-direction: reverse;
+    left: -60%;
+    top: -97%;
+}
+
+.small-circle-1 {
+    width: 38rem;
+    height: 38rem;
+    top: -58%;
+    left: -22%;
+}
+
+.small-circle-2 {
+    width: 30rem;
+    height: 30rem;
+    top: -24%;
+    left: 9%;
+    animation-direction: reverse;
+}
+
+.ball {
+    position: absolute;
+    top: 54%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 5s;
+}
+
+
+/* ball color & size start */
+
+.outer_ball {
+    background-color: var(--violet-color);
+    width: 40px;
+    height: 40px;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--violet-glow-color), 1);
+}
+
+.middle_ball {
+    background-color: var(--yellow-color);
+    width: 40px;
+    height: 40px;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--yellow-glow-color), 1);
+}
+
+.inside_ball {
+    background-color: var(--green-color);
+    width: 35px;
+    height: 35px;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--green-glow-color), 1);
+}
+
+.inside_ball2 {
+    background-color: var(--light-red-color);
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 28px 7px rgba(var(--light-red-glow-color), 1);
+    top: 10%;
+    left: 20%;
+}
+
+
+/* ball color & size end */
+
+
+/* circle ball animation for rotation */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* circle animation for rotation end*/
+
+/* circle animation end */
+/* square animation start */
+/* square animation start */
+
+.box_section {
+    position: absolute;
+    /* Using fixed positioning to ensure it stays fixed relative to the viewport */
+    bottom: -3%;
+    right: -20%;
+    /* Hide overflow to prevent showing content outside the viewport */
+    width: 50%;
+    /* Adjust the width to control how much of the box is visible */
+    height: 50%;
+    /* Adjust the height to control how much of the box is visible */
+}
+
+
+/* box position */
+
+.outer-box {
+    width: 47rem;
+    height: 47rem;
+    border: 3px solid;
+    color: var(--color-White);
+    position: fixed;
+    bottom: -35%;
+    right: -20%;
+}
+
+.middle-box {
+    width: 38rem;
+    height: 38rem;
+    border: 3px solid;
+    color: var(--color-White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-box {
+    width: 30rem;
+    height: 30rem;
+    border: 3px solid;
+    color: var(--color-White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* square ball animation added */
+
+.square_ball {
+    margin-left: -16px;
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 6s linear infinite;
+    margin-top: -11px;
+}
+
+
+/* ball moving delay */
+
+.square_inside_ball {
+    animation-delay: 0s;
+}
+
+.square_middle_ball {
+    animation-delay: 1s;
+}
+
+.square_outer_ball2 {
+    animation-delay: 2s;
+}
+
+
+/* ball color and size */
+
+.square_inside_ball {
+    background-color: var(--violet-color);
+    width: 2rem;
+    height: 2rem;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--violet-glow-color), 1);
+}
+
+.square_middle_ball {
+    background-color: var(--yellow-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--yellow-glow-color), 1);
+}
+
+.square_outer_ball {
+    background-color: var(--green-color);
+    width: 2rem;
+    height: 2rem;
+    /* color glow */
+    box-shadow: 0 0 28px 5px rgba(var(--green-glow-color), 1);
+}
+
+
+/* ball rotation animation for direction and run & stop  */
+
+@keyframes orbit {
+    0% {
+        top: 0;
+        left: 100%;
+    }
+    25% {
+        top: 100%;
+        left: 100%;
+    }
+    50%,
+    65% {
+        top: 100%;
+        left: 0;
+    }
+    75% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 100%;
+    }
+}
+
+
+/* circle and square animation delay */
+
+
+/* Apply animation to circle balls */
+
+.outer_ball,
+.middle_ball,
+.inside_ball {
+    animation: rotate 5s linear infinite;
+}
+
+
+/* Apply animation to square balls */
+
+.square_inside_ball,
+.square_middle_ball,
+.square_outer_ball {
+    animation: orbit 5s linear infinite;
+    animation-direction: reverse;
+}
+
+
+/* circle and square animation delay */
+
+
+/* square animation end */
+
+/* square animation end */
+/* landing text animation end */
+
+.first_section {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: relative; 
+overflow: hidden;
+}
+
+.fixed-background::before {
+background-image: url("../../../assets/image_land.jpg");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+z-index: -1;
+}
+/* home text */
+
+/* middle border */
+.blur_bg .right-border-v {
+    flex: 0 0 50%;
+    padding: 15px;
+    border: 2px solid #ccc; /* Add default border */
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+  }
+.blur_bg .left-border-v {
+
+flex: 0 0 50%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+/* middle border end */
+/* blur box end */
+/* KnowMore btn */
+
+.know_more_btn {
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+/* nomore btn-end */
+
+
+/* section 2 */
+
+.section_2 {
+    margin: 3rem;
+}
+
+.text_section {
+    color: var(--color-White);
+    margin: 15rem;
+    padding: 2rem;
+    /* Adjust as needed */
+}
+
+.text_blur {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 4rem;
+}
+
+.text_section p {
+    font-size: 2rem;
+}
+
+.bgimg_1 {}
+
+.bgimg_2 {}
+
+.bgimg_3 {}
+
+
+/* section2 end */
+
+
+/*-------------------------------------!Note-------------------------- */
+
+
+/*Dont add width margin anything in media query except font size & circle animation and circle size */
+
+
+/* in box animation dont need to reduce size just adjst position */
+
+
+/* Styles for mobile screens */
+
+@media only screen and (max-width: 767px) {
+    /* ------------------------------------------------------ */
+    /* landing page start */
+.big-circle {
+        width: 30rem;
+        height: 30rem;
+    }
+    .small-circle-1 {
+        width: 20rem;
+        height: 20rem;
+    }
+    .small-circle-2 {
+        width: 10rem;
+        height: 10rem;
+    }
+/* square */
+.outer-box {
+  bottom: -56%;
+  right: -52%;
+}
+   
+}
+
+
+/* Styles for tablet screens */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+   .big-circle {
+        width: 35rem;
+        height: 35rem;
+    }
+    .small-circle-1 {
+        width: 25rem;
+        height: 25rem;
+    }
+    .small-circle-2 {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+
+/* Styles for window and laptop screens */
+
+@media only screen and (min-width: 1200px) {
+  
+}

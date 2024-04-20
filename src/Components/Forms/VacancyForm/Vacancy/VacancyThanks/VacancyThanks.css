@@ -1,0 +1,41 @@
+.vthanks_bg::before{
+background-image: url("../../../../../assets/Career/Forms/v_thanks.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: contain;
+background-repeat: no-repeat;
+z-index: -1;
+background-position: right center;
+background-color: rgba(15, 211, 255, 0.5);
+}
+
+.vtbox p{
+color: black;
+font-size: 1rem;
+}
+
+.vtbox h4{
+color: black;
+}
+.vtbox{
+height: auto;
+background-color: #8AD896;
+overflow: auto;
+width: 59%;
+margin-left: 2rem;
+opacity: 0.8;
+padding: 2rem;
+border-radius: 10px;
+border: 2px solid black;
+margin-top: rem;
+}
+
+@media only screen and (max-width: 767px) {
+.vtbox{
+height: 100vh;
+width: 100%;
+margin: 0 !important;
+}
+}

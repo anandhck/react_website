@@ -1,0 +1,24 @@
+.cntrdiv p{
+color: rgb(255, 255, 255);
+}
+.bcln button{
+border-radius: 20px;
+color: black;
+}
+.stbg::before{
+ background-image: url("../../../../assets/Services/fbgimg.png");
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: #efd7d7;
+}
+
+.form_sectons{
+background-color: #0a5467;
+border-radius: 20px;
+border: 1px solid white;
+}

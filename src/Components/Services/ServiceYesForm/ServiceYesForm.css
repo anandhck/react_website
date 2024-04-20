@@ -1,0 +1,40 @@
+.syf{
+background-color: #FCBFBF; 
+
+}
+.syft{
+background-color: white;
+}
+.syfbg{
+background-color: #B8D6BE;
+}
+.syft p,li{
+color: black;
+}
+.syft h3{
+color: #0DD3FF !important;
+}
+.syfc{
+border-radius: 20px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.btnsyb button{
+ border-radius: 50px;
+}
+.btnsyb .bbtn{
+color: black;
+background-color: white;
+}
+.btnsyb .sbtn{
+color: black;
+}
+
+.btnsyb{
+gap: 30px;
+background-color: rgb(240, 240, 240);
+border-radius: 50px;
+z-index: 1;
+width: 41%;
+  margin-left: -6rem;
+margin-bottom: 0.5rem;
+}

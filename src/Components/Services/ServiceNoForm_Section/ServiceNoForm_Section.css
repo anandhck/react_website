@@ -1,0 +1,13 @@
+.notxts{
+background-color: whitesmoke;
+padding: 2rem;
+}
+
+.notxts p{
+font-size: clamp(1.0625rem, 2vw, 1.2rem);
+}
+.snfs button{
+color: black;
+border-radius: 50px;
+border: 1px solid black;
+}

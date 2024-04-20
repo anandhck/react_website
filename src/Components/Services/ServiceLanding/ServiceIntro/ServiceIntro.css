@@ -1,0 +1,85 @@
+/* .slb{
+background-color: #EFD7D7;
+} */
+.slb::before {
+  background-image: url("../../../../assets/Services/background.png");
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: #efd7d7;
+}
+.options {
+  height: 10rem;
+  width: 20rem;
+  margin-left: -25rem;
+  backdrop-filter: blur(4px);
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.got_it {
+  margin-top: 5rem;
+  margin-left: -27rem;
+  gap: 20px;
+border-radius: 20px;
+}
+.mf {
+  display: flex;
+  justify-content: center !important;
+  align-items: start !important;
+  flex-direction: column;
+}
+.slb_img img {
+  width: 54rem;
+  height: 100vh;
+  object-fit: contain;
+}
+
+/* button gap */
+.b_g {
+  gap: 2rem;
+}
+
+.btn_ys button {
+  color: black;
+}
+
+.slb {
+  overflow-x: hidden;
+}
+
+.slimg {
+  max-width: 100%;
+  height: 100vh;
+}
+.got_it h2 {
+  font-family: "Vast Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.got_it button {
+  background-color: chartreuse;
+}
+
+@media only screen and (max-width: 767px) {
+  .options {
+    margin: 0;
+  }
+  .got_it {
+    margin: 0;
+  }
+  .mf {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+  }
+}

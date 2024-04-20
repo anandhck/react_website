@@ -1,0 +1,15 @@
+.fbg{
+background-image: url("../../../assets/Projects/upload/formbg.png");
+background-size: cover;
+z-index: 1;
+box-shadow: -35px 34px 38px 20px rgba(255,255,255,0.8);
+}
+
+.fbg .form-label{
+color: #45FF03;
+}
+
+.blur_bg_f{
+backdrop-filter: blur(2px);
+background: transparent;
+}

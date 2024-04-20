@@ -1,0 +1,28 @@
+
+/* border box */
+.v_border_style{
+border: 10px solid black;
+padding: 20px
+}
+/* height of border box */
+.v_border_style{
+height: 32rem;
+width: 65%;
+overflow:auto;
+background-color: #ffffff;
+}
+
+.v_border_style p{
+font-size: clamp(1.0625rem, 1vw, 1.5rem);
+color: black !important;
+}
+.v_border_style h5{
+font-weight: 800;
+}
+
+.v_border_style h3{
+color: black !important ;
+}
+.v_border_style ul li{
+color: black !important;
+}

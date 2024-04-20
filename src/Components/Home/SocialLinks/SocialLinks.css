@@ -1,0 +1,82 @@
+/* icon size */
+.icon {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Create a circular shape */
+  background-color: #ffffff; /* Background color */
+box-shadow:rgb(255, 255, 255) -16px -12px 13px 3px, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgb(2, 8, 10) 5px 4px 15px 1px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  /* border: 2px solid #000000; */
+}
+
+/* Style for the icon */
+.insta_icon{
+/* box-shadow:rgb(255, 255, 255) -16px -12px 13px 3px, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgb(2, 8, 10) 5px 4px 15px 1px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+
+.facebook_icon{
+margin-top: -1rem;
+}
+
+.whatsapp_icon{
+margin-top: 1rem;
+
+}
+.telegram_icon{
+margin-top: -1rem;
+
+}
+.gmail_icon{
+margin-top: 1rem;
+
+}
+.main {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  cursor: pointer;
+  padding: 13px;
+}
+
+/* container height */
+.custume_height{
+/* max-height: 40vh; */
+height: auto;
+background: rgb(178,178,178);
+background: -moz-linear-gradient(243deg, rgba(178,178,178,1) 0%, rgba(255,255,255,1) 95%);
+background: -webkit-linear-gradient(243deg, rgba(178,178,178,1) 0%, rgba(255,255,255,1) 95%);
+background: linear-gradient(243deg, rgba(178,178,178,1) 0%, rgba(255,255,255,1) 95%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b2b2b2",endColorstr="#ffffff",GradientType=1);
+padding: 3rem;
+border-radius: 3rem;
+margin-top: 5rem;
+color: black;
+box-shadow: rgb(255, 255, 255) 0px -4px 90px}
+
+.icon_gap{
+gap: 6rem;
+margin-top: 2rem;
+}
+
+.font_size{
+color: black;
+}
+
+.custume_height:hover{
+box-shadow: none;
+background: white;
+}
+
+/* media query mobile view */
+@media only screen and (max-width: 767px) {
+   /* all page global size */
+.icon_gap{
+gap: 0.8rem;
+}
+   
+}

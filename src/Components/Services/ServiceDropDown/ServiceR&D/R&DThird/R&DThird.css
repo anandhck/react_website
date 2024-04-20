@@ -1,0 +1,136 @@
+/* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+.rdthird{
+background-image: url("../../../../../assets/Services/R&D/rdbg.png");
+  background-size: cover;
+background-position: center;
+}
+/* .hexza_section {
+   
+} */
+.hexza{
+  background: radial-gradient(circle, #4caf51, #f2c706);
+     width: 18rem;
+    height: 17rem;
+    text-align: center;
+   clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hexza_section{
+position: absolute;
+}
+/* circle section */
+.circlerd {
+  position: absolute;
+ width: 10rem;
+    height: 10rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.circle-top-left {
+top: -11rem;
+    left: -5rem;
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #7FB47D;
+box-shadow:0 0 17px 8px #7FB47D;
+}
+
+.circle-top-right {
+    top: -11rem;
+    right: -4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #71F395;
+box-shadow:0 0 17px 8px #71F395;
+}
+
+.circle-bottom-left {
+    bottom: -9rem;
+    left: -3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #40B23B;
+box-shadow:0 0 17px 8px #40B23B;
+}
+
+.circle-bottom-right {
+ bottom: -9rem;
+    right: -5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #4ED89E;
+box-shadow:0 0 17px 8px #4ED89E;
+}
+
+.circle-top {
+   top: 3rem;
+    left: -71%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ABD763;
+box-shadow:0 0 17px 8px #ABD763;
+}
+
+.circle-bottom {
+bottom: 5rem;
+    right: -72%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #347D31;
+box-shadow:0 0 17px 8px #347D31;
+}
+/* hover section */
+
+.circle-top-left:hover{
+box-shadow: none;
+border: 1px solid black;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.circle-top-right:hover {
+box-shadow: none;
+border: 1px solid black;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.circle-bottom-left:hover {
+box-shadow: none;
+border: 1px solid #71F395;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.circle-bottom-right:hover {
+box-shadow: none;
+border: 1px solid #12f030;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.circle-top:hover {
+box-shadow: none;
+border: 1px solid #05fa7b;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.circle-bottom:hover {
+box-shadow: none;
+border: 1px solid #71F395;
+transform: scale(1.05); /* Adjust the scale factor as needed */
+transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}

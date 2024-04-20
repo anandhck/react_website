@@ -1,0 +1,51 @@
+.card_section_care .xl_card{
+background-color: #02bcff;
+width: 73% !important;
+}
+/* card width */
+#lg_card{
+width:50% !important;
+}
+/* card background */
+.card_section_care .card{
+background-color: #02bcff;
+}
+/* responsive text */
+.Career h1{
+font-size: calc(1.375rem + 1vw);
+font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+color: white;
+}
+/* responsive text */
+.card_section_care .card .P_care{
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+font-size: calc(1.375rem + 0.5vw);
+}
+/* responsive button */
+.card_section_care .card .P_care button{
+width: 85%;
+margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+.card_section_care .xl_card{
+width: 50% !important;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+/* card width */
+#lg_card{
+width:50% !important;
+}
+
+.card_section_care .card .P_care button {
+width: 100%;
+font-size: 4vw;
+}
+}

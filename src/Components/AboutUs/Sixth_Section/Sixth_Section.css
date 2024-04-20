@@ -1,0 +1,52 @@
+.custume_height_abt{
+height: 20vh;
+}
+/* background img */
+.ele_img::before{
+ content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../../assets/About/ele.png");
+  background-size: cover; 
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -1; 
+}
+.img_height img{
+height: 15rem;
+}
+/* content bottom */
+.ele_img{
+padding-top: 33rem;
+}
+
+/* margin right  */
+.rh_m{
+margin-right: 10% !important;
+border-top-right-radius: 100px;
+}
+.res_text p{
+ font-family: "Salsa", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+color: white;
+font-size: clamp(12px, 4vw, 1.2rem);
+}
+@media only screen and (max-width: 767px) {
+.img_height img {
+  height: 7rem;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+   .img_height img {
+  height: 7rem;
+}
+.col-xxl-6.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12.d-flex {
+    flex-direction: column; /* Change to your desired display property */
+  }
+}

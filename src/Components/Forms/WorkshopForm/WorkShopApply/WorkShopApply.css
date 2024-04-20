@@ -1,0 +1,46 @@
+/* background img */
+.w_form_bg::before{
+  background-image: url("../../../../assets/Career/Forms/workshop__form_bg.png");
+ content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+background-color: rgba(0, 0, 0, 0.8);
+/* dark background */
+filter: brightness(50%);
+filter: brightness(50%);
+background-position: center;
+}
+
+.w_form_bg .col-form-label{
+color: white;
+}
+.note{
+font-size: 1rem;
+}
+
+.w_text_center_wrk{
+display: flex;
+justify-content: center;
+}
+
+.int_field{
+height: 2rem;
+}
+.icon_p p{
+ font-size: 0.8rem;
+}
+.contact_w{
+gap: 20px;
+}
+.w_text_center_wrk p{
+font-size: 1rem;
+}
+@media only screen and (max-width: 767px) {
+.form_flex{
+flex-direction: column;
+}
+}

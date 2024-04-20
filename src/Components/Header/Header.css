@@ -1,0 +1,109 @@
+:root {
+    --color-White: #ffffff;
+    --color-blue: #06c9ff;
+    --color-selected-menu: #022cff;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+/* navbars gap */
+
+.nav_items_gap {
+    gap: 2rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+/* logo property */
+
+.navbar-brand {
+    height: 7rem;
+    width: 7rem;
+}
+
+
+/* logo end */
+
+
+/* navbar menus hover effect */
+
+.navbar-nav .nav-item a:hover {
+    color: var(--color-blue) !important;
+    font-size: large;
+}
+
+
+/* selected menu showing color */
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border: none;
+    width: 80%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--color-selected-menu);
+}
+
+
+/* navbar menus hover effect  end*/
+
+
+/* mobile view three menu icon */
+
+.navbar-toggler-icon {
+    background-color: var(--color-White);
+}
+
+
+/* remove a tag border line */
+
+button a {
+    text-decoration: none !important;
+}
+
+/* media query */
+@media only screen and (max-width: 767px) {
+
+}
+@media (max-width: 1200px) { /* Apply styles only for screens smaller than or equal to 992px width */
+  /* nav menu left to right */
+.left-to-right-collapse {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.175);
+}
+
+.left-to-right-collapse.show {
+  display: block;
+}
+}
+
+/* service button */
+.nav-item button{
+background-color: transparent;
+border:none;
+}
+
+.navbar-nav .dropdown-menu{
+color: black;
+backdrop-filter: blur(32px);
+background: transparent;
+}
+

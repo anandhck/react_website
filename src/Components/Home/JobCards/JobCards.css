@@ -1,0 +1,46 @@
+/* full height */
+.parallax_height{
+height: auto;
+min-height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 5rem;
+}
+/* gap between cards */
+.custume_margin{
+gap: 20px;
+border-color: aqua;
+}
+/* each cards border */
+#jobcard.card-group>.card {
+border: none;
+border-radius: 0 !important;
+margin: 20px;
+background-color: transparent;
+}
+/* hover effect */
+#jobcard.card-group > .card:hover{
+border: 1px solid red;
+background-color: black;
+transform: scale(1.1); /* Scale the card by 10% on hover */
+transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+#jobcard.card-group .card .card-img-top{
+border-radius: 0 !important;
+}
+
+.custume_margin.card.title{
+text-align: center;
+}
+
+/* backgroundimg */
+.card_background_img::before{
+background-image: url("../../../assets/card_bg_img.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+}

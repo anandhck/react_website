@@ -1,0 +1,39 @@
+.carousel-control-next-icon {
+color: brown;
+}
+.carousel-indicators {
+    display: none;
+}
+.client .card{
+width: 100%;
+height: auto;
+}
+.client .card p{
+font-size: clamp(1.0625rem, 2vw, 1.1rem);
+
+}
+.card_g{
+gap: 20px;
+}
+.client .card_1{
+background-color:#7B5555 ;
+}
+.client .card_2{
+background-color: #557B60;
+}
+.client .card_3{
+background-color: #68712F;
+}
+.client .card_4{
+background-color:#7B5555 ;
+}
+.client .card_5{
+background-color: #557B60;
+}
+.client .card_6{
+background-color: #68712F;
+}
+
+.carousel-indicators [data-bs-target]{
+background-color: #f50000 !important;
+}

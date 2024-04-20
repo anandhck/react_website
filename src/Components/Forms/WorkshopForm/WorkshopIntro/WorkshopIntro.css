@@ -1,0 +1,52 @@
+.img_center_wrk{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.text_center_wrk{
+justify-content: left;
+align-items: left;
+display: flex;
+flex-direction: column;
+background-color: white;
+padding: 1rem;
+}
+.img_center_wrk img{
+width: 100%;
+    min-width: 100%;
+    height: 53vh;
+    object-fit: cover;
+}
+.text_center_wrk p{
+font-size: clamp(1.0625rem, 1vw, 1.5rem);
+color: black;
+}
+/* background img */
+.workshop_bg::before{
+content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../../../../assets/Career/Forms/background.png");
+  background-size: cover; 
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -1; 
+background-color: rgba(0, 0, 0, 0.8);
+/* dark background */
+filter: brightness(50%);
+}
+.button_align{
+margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    gap: 10rem;
+}
+.button_align button{
+color: white;
+}
+.r_flex{
+background-color: white;
+}

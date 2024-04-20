@@ -1,0 +1,35 @@
+.rdcardbg .card{
+background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+border: none;
+}
+
+.textbody{
+width: 80%;
+margin-top: -4rem;
+}
+.modal-fullscreen .card{
+border: none;
+}
+
+.modal-content{
+background-color: #8C94BC !important;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+width: 60rem !important;
+height: 90vh;
+overflow: auto;
+top: 22%;
+    left: -43%;
+}
+.modal .card{
+background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+border: none;
+}
+.modal-content p{
+font-size: clamp(1.0625rem, 2vw, 1.1rem);
+}

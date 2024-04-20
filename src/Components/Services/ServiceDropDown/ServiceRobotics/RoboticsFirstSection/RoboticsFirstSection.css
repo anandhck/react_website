@@ -1,0 +1,13 @@
+.roboticsbg::before{
+background-image: url("../../../../../assets/Services/Robotics/bg.png");
+  content: "";
+  position: fixed;
+width: 100%;
+height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+background-color: rgba(0, 0, 0, 0.8);
+/* dark background */
+filter: brightness(30%);
+}

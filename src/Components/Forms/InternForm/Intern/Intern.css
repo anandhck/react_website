@@ -1,0 +1,30 @@
+.intern_from_section::before{
+background-image: url("../../../../assets/Career/Forms/intern_form_bg.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+background-color: rgba(0, 0, 0, 0.8);
+/* dark background */
+filter: brightness(50%);
+}
+
+.intern_from_section{
+display: flex;
+width: 47rem;
+}   
+.intern_from_section form{
+width: 82%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #8DB294;
+}
+.from_btns button{
+border-radius: 20px;
+color: white;
+}

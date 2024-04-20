@@ -1,0 +1,46 @@
+.w_bg_color{
+background-color: gray;
+}
+.box_shadow{
+box-shadow: rgba(0, 0, 2, 0.4) 0px 49px 40px 12px;
+
+}
+#workshop_id .card{
+background-color: transparent !important;
+border: none;
+}
+
+#workshop_id .card .card-footer{
+background-color: transparent !important;
+border-top: none !important;
+}
+.w_card_title{
+padding: 0;
+color: white;
+
+}
+.w_card_title p{
+font-size: clamp(1.0625rem, 1vw, 1.5rem);
+}
+.care_w_section{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.care_w_section h3{
+display: flex;
+justify-content: center;
+}
+.care_w_section .card-body{
+padding: 0;
+}
+#w_card_id p {
+font-size: calc(0.8rem + 0.2vw);
+}
+
+@media only screen and (max-width: 767px) {
+/* workshop font size */
+#w_card_id p {
+font-size: 3vw;
+}
+}

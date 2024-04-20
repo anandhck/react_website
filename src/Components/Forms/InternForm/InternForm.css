@@ -1,0 +1,60 @@
+.intern_from_bg::before{
+background-image: url("../../../assets/Career/Forms/int_bg.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+}
+
+/* border box */
+.border_style{
+border: 10px solid black;
+padding: 20px
+}
+/* height of border box */
+.border_style{
+height: 32rem;
+width: 65%;
+overflow:auto;
+background-color: #A7D9AC;
+}
+.center_box{
+display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.border_style p{
+font-size: clamp(1.0625rem, 1vw, 1.5rem);
+color: black;
+}
+.border_style h5{
+font-weight: 800;
+}
+
+.border_style h3{
+color: black !important ;
+}
+.apply_btn button{
+white-space: nowrap;
+}
+.back_btn button{
+white-space: nowrap;
+}
+
+.intern_from_bg button{
+border: 1px solid white;
+border-radius: 20px;
+}
+@media only screen and (max-width: 767px) {
+.form_intro{
+display: flex;
+flex-direction: column-reverse;
+}
+.border_style{
+width: 100%;
+}
+}

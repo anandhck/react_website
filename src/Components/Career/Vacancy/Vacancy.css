@@ -1,0 +1,30 @@
+
+#vacancy_id .card{
+background-color: transparent !important;
+}
+#vacancy_id .v_card_text{
+font-size: calc(0.8rem + 0.2vw);
+color: white;
+}
+
+.care_v_section{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.v_card_title{
+color: #8BD86F !important;
+}
+.care_v_section h3{
+display: flex;
+justify-content: center;
+}
+#vacancy_id .card{
+background-color: transparent !important;
+border: none;
+}
+#vacancy_id .card .card-footer{
+background-color: transparent !important;
+border-top: none !important;
+}

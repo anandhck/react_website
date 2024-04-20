@@ -1,0 +1,43 @@
+.intern_thanks_bg::before{
+background-image: url("../../../../assets/Career/Forms/workshop__form_bg.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+}
+
+.itbox p{
+color: black;
+font-size: 1rem;
+}
+
+.itbox h4{
+color: black;
+}
+.itbox{
+height: auto;
+background-color: #8AD896;
+opacity: 0.8;
+padding: 2rem;
+border-radius: 10px;
+border: 2px solid black;
+margin-top: 6rem;
+margin-left: 5rem;
+width: 60%;
+}
+.irimg img{
+height: 25rem;
+margin-left: -7rem;
+}
+.irimg{
+display: flex;
+justify-content: start;
+align-items: center;
+}
+.intern_thanks_bg button{
+color: white;
+border-radius: 20px;
+}

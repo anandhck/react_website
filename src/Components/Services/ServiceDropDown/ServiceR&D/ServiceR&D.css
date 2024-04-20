@@ -1,0 +1,17 @@
+  
+.serrdbg::before{
+background-image: url("../../../../assets/Services/R&D/backgroundimg.png");
+  content: "";
+  position: fixed;
+width: 100%;
+height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.serrdbg{
+position: relative;
+}
+.imgcon{
+margin-left: -16rem;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Vast+Shadow&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+code { 
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a{
+text-decoration: none !important;
+color: aliceblue !important;
+}
+
+h3{
+font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+color: white !important;
+}
+
+p{
+ font-family: "Salsa", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+color: white;
+font-size: clamp(1.0625rem, 2vw, 1.5rem);
+}
+.blur_bg{
+backdrop-filter: blur(10px);
+background: transparent;
+}
+.dark_blur_bg{
+backdrop-filter: blur(32px);
+background: transparent;
+}
+
+ul li {
+list-style: none;
+color: white;
+}
+
+.height{
+height: auto;
+min-height: 100vh !important;
+}
+
+.min_height{
+height: 90vh;
+}
+
+.white_bg{
+background-color: white;
+}
+
+.black_bg{
+background-color: black;
+}

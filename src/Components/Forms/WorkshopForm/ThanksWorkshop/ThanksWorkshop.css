@@ -1,0 +1,33 @@
+
+.wthanks_bg::before{
+background-image: url("../../../../assets/Career/Forms/thanks.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: contain;
+background-repeat: no-repeat;
+z-index: -1;
+background-position: left center;
+background-color:rgb(64, 99, 111);
+}
+
+.wtbox p{
+color: black;
+font-size: 1.4rem;
+}
+
+.wtbox{
+height: auto;
+text-align: end;
+margin-top: 6rem;
+margin-left: 16rem;
+}
+
+@media only screen and (max-width: 767px) {
+.wtbox{
+height: 100vh;
+width: 100%;
+margin: 0 !important;
+}
+}

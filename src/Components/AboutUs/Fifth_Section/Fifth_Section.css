@@ -1,0 +1,44 @@
+.list_bg{
+background: rgb(0, 0, 0);
+background: -moz-linear-gradient(0deg, rgb(6, 4, 33) 56%, rgba(3,1,19,1) 100%);
+background: -webkit-linear-gradient(0deg, rgb(9, 7, 56) 56%, rgba(3,1,19,1) 100%);
+background: linear-gradient(0deg, rgb(9, 8, 41) 56%, rgba(3,1,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0957",endColorstr="#030113",GradientType=1);
+}
+.list_bg{
+line-height: 2;
+}
+.Fourth_img_style .img-fluid{
+margin-left: -12%;
+filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+/* height: 90vh; */
+}
+.list_bg h3{
+font-size: clamp(12px, 2vw, 32px);
+}
+.list_bg li{
+font-size: clamp(12px, 2vw, 18px);
+}
+
+@media only screen and (max-width: 767px) {
+.list_bg {
+  line-height: normal;
+height: auto;
+}
+.Fourth_img_style{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.Fourth_img_style img{
+margin: 0 !important;
+height: 30vh;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+ .list_bg{
+line-height: normal;
+height: auto;
+}
+}

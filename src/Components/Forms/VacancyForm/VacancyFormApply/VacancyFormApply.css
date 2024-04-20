@@ -1,0 +1,26 @@
+.vform_text p{
+color: black;
+font-size: small;
+}
+.vform_text h5{
+color: black;
+font-size: medium;
+}
+.vform_text button{
+color: white;
+border-radius: 20px;
+}
+.f_w{
+width: 62%;
+}
+.s_m button{
+border-radius: 20px;
+color: white;
+}
+.s_m{
+gap: 8rem;
+}
+
+.intern_from_section form{
+margin-top: 5rem;
+}

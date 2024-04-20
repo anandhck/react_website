@@ -1,0 +1,31 @@
+.subtdt span{
+color: black;
+font-size: 1rem;
+}
+.subtdt p{
+color: black;
+font-size: 1rem;
+}
+.subtdt .subtdtw{
+background-color: white !important;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+margin-top: 4rem;
+}
+.subtdtw ol li{
+font-size: 0.8rem;
+}
+.subtdtbg::before{
+background-image: url("../../../assets/Services/background.png");
+content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+background-color: #E08383;
+}
+.bback button{
+border-radius: 50px;
+color: black;
+}

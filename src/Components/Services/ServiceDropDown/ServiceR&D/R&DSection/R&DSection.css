@@ -1,0 +1,45 @@
+.textb p{
+color: black;
+}
+.textb .card-title{
+background-color: #00D1FF;
+}
+.textb .card{
+background: transparent !important;
+color: white;
+border:1px solid #00D1FF;
+}
+.textb .card .card-body{
+padding: 0;
+}
+.textb .card .card-text{
+padding: 1rem;
+}
+.card-group>.card:not(:first-child) {
+    border: 1px solid #00D1FF !important;
+  }
+.textb .card p{
+color: white;
+font-size: clamp(1.0625rem, 2vw, 1.2rem);
+}
+.textb{
+gap: 10px;
+}
+.cardorg:hover{
+background-color: chocolate;
+}
+.cardblue:hover{
+background-color: #0f4ae0;   }
+
+.cardvio:hover{
+background-color: #e512dee4;   }
+.cardorg:hover{
+background-color: #f04309e4;   }
+
+.textb .card:hover{
+transform: scale(1.05); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+.textb .card-title{
+text-align: center;
+}

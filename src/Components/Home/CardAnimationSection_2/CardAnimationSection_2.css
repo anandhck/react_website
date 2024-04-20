@@ -1,0 +1,7 @@
+
+/* card center text */
+
+.bg_box {
+  backdrop-filter: blur(10px);
+ padding: 2rem;
+}

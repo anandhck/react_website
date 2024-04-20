@@ -1,0 +1,9 @@
+.img_style{
+margin: 1rem;
+}
+.img_style img{
+border-radius: 20px;
+}
+.abt_text p{
+text-indent: 60px;
+}

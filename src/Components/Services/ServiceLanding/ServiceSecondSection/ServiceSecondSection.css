@@ -1,0 +1,88 @@
+.cntxgap{
+gap: 20px;
+border-radius: 20px;
+margin-top: 1rem;
+}
+
+.cntxgap img{
+max-width: 100%;
+height: 6rem !important;
+}
+
+.gap{
+gap: 10rem;
+}
+
+.ssbclr::before{
+  background-image: url("../../../../assets/Services/r&dbg.png");
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: #efd7d7;
+}
+
+.cntxgapclr{
+/* background-color: #7DAFBA; */
+ background-color: rgba(239, 215, 215, 0.5);
+
+}
+.cntxgapvclr{
+ background-color: rgba(234, 30, 217, 0.5);
+}
+.cntxgapdgclr{
+background-color: rgba(4, 63, 17, 0.5);
+}
+.cntxgaplgclr{
+background-color: rgba(32, 233, 59, 0.5);
+}
+
+/* tabs section */
+.react-tabs {
+  display: flex;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.react-tabs__tab {
+  list-style: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+.react-tabs__tab--selected {
+  color: rgb(0, 0, 0);
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+/* .react-tabs__tab {
+  padding-left: 24px;
+}
+
+.react-tabs__tab--selected {
+  padding-left: 21px;
+} */
+
+.panel-content {
+  text-align: center;
+}
+
+.pmrgin{
+margin-top: 6rem;
+}
+.prmarin{
+margin-top: 5rem;
+}
