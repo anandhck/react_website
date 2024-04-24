@@ -19,11 +19,15 @@ const RoboticsFirst = () => {
               <div className="col-md-2">
                 <div className="sidebar dark_blur_bg d-flex justify-content-center flex-column align-items-center">
                   <Link to="/uploadprojects">
-                    <Button variant="outline-info" className='mt-3'>Upload Projects</Button>
+                    <Button variant="outline-info" className="mt-3">
+                      Upload Projects
+                    </Button>
                   </Link>
                   <ul>
                     <li>
-                      <Link to="/project">ROBOTICS AND AUTOMATION</Link>
+                      <Link to="/roboticsprojects">
+                        ROBOTICS AND AUTOMATION
+                      </Link>
                     </li>
                     <li>
                       <Link to="/diyprojects">DIY PROJECTS</Link>

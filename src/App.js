@@ -36,6 +36,9 @@ import IOTFirst from './Components/Projects/IOT/IOTFirst';
 import WebAppFirst from './Components/Projects/WebApp/WebAppFirst';
 import DesignPrintingFirst from './Components/Projects/DesignPrinting/DesignPrintingFirst';
 import UploadProjects from './Components/Projects/UploadProjects/UploadProjects';
+import BlogsForms from './Components/Projects/Blogs/BlogsForms';
+import RoboticsFirst from './Components/Projects/Robotics/RoboticsFirst/RoboticsFirst';
+import BlogsPage from './Components/Projects/BlogsPage/BlogsPage';
 function App() {
   return (
     <>
@@ -80,6 +83,8 @@ function App() {
           <Route path='/servicesoftware' element={<ServiceSoftwareLanding />} />
           {/* robotics */}
           <Route path='/robotics' element={<Robotics />} />
+          {/* project robotics */}
+          <Route path='/roboticsprojects' element={<RoboticsFirst />} />
           {/* service mobile */}
           <Route path='/mobile' element={<ServiceMobile />} />
           {/* projects page */}
@@ -95,6 +100,11 @@ function App() {
           <Route path='/design' element={<DesignPrintingFirst />} />
           {/* upload projects */}
           <Route path='/uploadprojects' element={<UploadProjects />} />
+          {/* blogs forms */}
+          <Route path='/blogsform' element={<BlogsForms />} />
+          {/* blogs page */}
+                    <Route path='/blogspage' element={<BlogsPage />} />
+
           
         </Routes>
       </BrowserRouter>

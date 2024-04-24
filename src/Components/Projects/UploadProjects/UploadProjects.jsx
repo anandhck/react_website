@@ -146,7 +146,7 @@ const UploadProjects = () => {
                       Cancel
                     </Button>
                   </Link>
-                  <Link to="/">
+                  <Link to="/blogsform">
                     <Button variant="success" type="submit" className="tbtn">
                       Next
                     </Button>
