@@ -5,7 +5,6 @@ import { Link, useSearchParams } from "react-router-dom";
 import axios from 'axios';
 import moment from "moment";
 const BlogsForms = () => {
-  const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [shotDes, setSDes] = useState("");
   const [tImg, setTitleImg] = useState(null);
@@ -14,6 +13,24 @@ const BlogsForms = () => {
   const [component, setComponent] = useState("");
   const [architecturedesc, setArchitecturedesc] = useState("");
   const [systemSetup, setsystemSetup] = useState("");
+  const [systemSetupdescription, setsystemSetupdescription] = useState("");
+  const [systemSecondSetupdescription, setsystemSecondSetupdescription] =
+    useState("");
+  const [systemSetupThreedescription, setsystemSetupThreedescription] =
+    useState("");
+  const [systemImpledescription, setsystemImpledescription] = useState("");
+  const [systemImpledescriptionTwo, setsetsystemImpledescriptionTwo] =
+    useState("");
+  const [systemImpledescriptionThree, setsystemImpledescriptionThree] =
+    useState("");
+   const [systemImpledescriptionFour, setsystemImpledescriptionFour] =
+     useState("");
+   const [systemImpledescriptionFive, setsystemImpledescriptionFive] =
+    useState(""); 
+  const [conclusion, setConclusion] = useState("");
+  const [references, setReferences] = useState("");
+  const [acknowledment, setAcknowledment] = useState("");
+
 
   const upload = async () => {
     try {
@@ -44,6 +61,19 @@ const BlogsForms = () => {
         cat: cat,
         objectives: objectives,
         architecturedesc: architecturedesc,
+        component: component,
+        systemSetup: systemSetup,
+        systemSetupdescription: systemSetupdescription,
+        systemSecondSetupdescription: systemSecondSetupdescription,
+        systemSetupThreedescription: systemSetupThreedescription,
+        systemImpledescription: systemImpledescription,
+        systemImpledescriptionTwo: systemImpledescriptionTwo,
+        systemImpledescriptionThree: systemImpledescriptionThree,
+        systemImpledescriptionFour: systemImpledescriptionFour,
+        systemImpledescriptionFive: systemImpledescriptionFive,
+        conclusion: conclusion,
+        references: references,
+        acknowledment: acknowledment, 
       }); 
     } catch (err) {
     console.log(err)
@@ -53,7 +83,7 @@ const BlogsForms = () => {
     return (
       <>
         <section className="blogsf d-flex justify-content-center align-items-center height">
-          <div className="container">
+          <div className="container mt-5">
             <div className="row">
               <div className="col-md-6">
                 <div className="label gap-5 d-flex justify-content-center align-items-center flex-column h-100">
@@ -69,7 +99,7 @@ const BlogsForms = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
+                <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-5">
                   <div className="d-flex gap-5">
                     <div>TITLE</div>
                     <input
@@ -177,7 +207,7 @@ const BlogsForms = () => {
                 <div>System setup 1 description:</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) => setsystemSetupdescription(e.target.value)}
                 />
               </div>
             </div>
@@ -199,7 +229,9 @@ const BlogsForms = () => {
                 <div>System setup 2 description:</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) =>
+                    setsystemSecondSetupdescription(e.target.value)
+                  }
                 />
               </div>
             </div>
@@ -221,7 +253,9 @@ const BlogsForms = () => {
                 <div>System setup 3 description:</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) =>
+                    setsystemSetupThreedescription(e.target.value)
+                  }
                 />
               </div>
             </div>
@@ -257,7 +291,7 @@ const BlogsForms = () => {
                   <div>Implementation setup description</div>
                   <input
                     type="text"
-                    onChange={(e) => setArchitecturedesc(e.target.value)}
+                    onChange={(e) => setsystemImpledescription(e.target.value)}
                   />
                 </div>
               </div>
@@ -267,7 +301,9 @@ const BlogsForms = () => {
                   <div>Implementation setup description</div>
                   <input
                     type="text"
-                    onChange={(e) => setArchitecturedesc(e.target.value)}
+                    onChange={(e) =>
+                      setsetsystemImpledescriptionTwo(e.target.value)
+                    }
                   />
                 </div>
               </div>
@@ -291,7 +327,9 @@ const BlogsForms = () => {
                 <div>Implementation setup description</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) =>
+                    setsystemImpledescriptionThree(e.target.value)
+                  }
                 />
               </div>
             </div>
@@ -329,7 +367,9 @@ const BlogsForms = () => {
                   <div>Implementation setup description</div>
                   <input
                     type="text"
-                    onChange={(e) => setArchitecturedesc(e.target.value)}
+                    onChange={(e) =>
+                      setsystemImpledescriptionFour(e.target.value)
+                    }
                   />
                 </div>
               </div>
@@ -339,7 +379,9 @@ const BlogsForms = () => {
                   <div>Implementation setup description</div>
                   <input
                     type="text"
-                    onChange={(e) => setArchitecturedesc(e.target.value)}
+                    onChange={(e) =>
+                      setsystemImpledescriptionFive(e.target.value)
+                    }
                   />
                 </div>
               </div>
@@ -350,7 +392,7 @@ const BlogsForms = () => {
                 <div>Conclusion</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) => setConclusion(e.target.value)}
                 />
               </div>
             </div>
@@ -361,7 +403,7 @@ const BlogsForms = () => {
                 <div>References</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) => setReferences(e.target.value)}
                 />
               </div>
             </div>
@@ -371,7 +413,7 @@ const BlogsForms = () => {
                 <div>Acknowledment</div>
                 <input
                   type="text"
-                  onChange={(e) => setArchitecturedesc(e.target.value)}
+                  onChange={(e) => setAcknowledment(e.target.value)}
                 />
               </div>
             </div>

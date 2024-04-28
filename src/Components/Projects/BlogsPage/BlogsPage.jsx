@@ -16,15 +16,6 @@ const BlogsPage = () => {
 }
 fetchData();
     },[])
-            //   const posts = [
-            //     {
-            //       id: 1,
-            //       title:
-            //         "Smart Home Automation System using Arduino and Raspberry Pi",
-            //       desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups",
-            //       img: "https://wallpapercave.com/wp/wp6397629.jpg",
-            //     },
-            //   ];
     return (
       <>
         <section className="tbg height d-flex justify-content-center align-items-center">
