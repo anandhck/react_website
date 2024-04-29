@@ -7,7 +7,8 @@ import moment from "moment";
 const BlogsForms = () => {
   const [title, setTitle] = useState("");
   const [shotDes, setSDes] = useState("");
-  const [tImg, setTitleImg] = useState(null);
+  // store all img id
+  // const [imageData, setImageData] = useState({});
   const [cat, setCat] = useState("robotics");
   const [objectives, setObjectives] = useState("");
   const [component, setComponent] = useState("");
@@ -30,28 +31,49 @@ const BlogsForms = () => {
   const [conclusion, setConclusion] = useState("");
   const [references, setReferences] = useState("");
   const [acknowledment, setAcknowledment] = useState("");
+  // imges
+  const [tImg, setTitleImg] = useState(null);
+  const [componentsImg, setComponentsImg] = useState(null);
+  const [sysAImg, setsysAImg] = useState(null);
+  const [sysSetupImg1, setSysSetupImg1] = useState(null);
+  const [sysSetupImg2, setSysSetupImg2] = useState(null);
+    const [sysSetupImg3, setSysSetupImg3] = useState(null);
+  const [impImg, setImpImg] = useState(null);
+  const [impImg2, setImpImg2] = useState(null);
+  const [impImg3, setImpImg3] = useState(null);
+  const [impImg4, setImpImg4] = useState(null);
+  
 
+   const uploadImages = async () => {
+     try {
+       const formData = new FormData();
+       formData.append("titleimg", tImg);
+       formData.append("compimg", componentsImg);
+       formData.append("sysAImg", sysAImg);
+       formData.append("sysSetupImg1", sysSetupImg1);
+       formData.append("sysSetupImg2", sysSetupImg2);
+       formData.append("sysSetupImg3", sysSetupImg3);
+       formData.append("impImg", impImg);
+       formData.append("impImg2", impImg2);
+       formData.append("impImg3", impImg3);
+       formData.append("impImg4", impImg4);
+       console.log("formdata", formData);
+       const res = await axios.post(
+         "http://localhost:8000/api/upload",
+         formData
+       );
+       console.log("Upload successful:", res.data);
+     } catch (err) {
+       console.error("Error uploading images:", err);
+     }
+   };
 
-  const upload = async () => {
-    try {
-      const formData = new FormData();
-      formData.append("file", tImg);
-      console.log("formdata", formData);
-      const res = await axios.post(
-        "http://localhost:8000/api/upload",
-        formData
-      );
-      console.log("blgresdata", res.data)
-      return res.data
-    } catch (err) {
-    console.log(err)
-    }
-  }
   
   const HandleSubmit =async e => {
     e.preventDefault()
-    const imgUrl = await upload();
-    console.log("img", imgUrl)
+
+    const imgUrl = await uploadImages();
+    console.log("imgcheck!!!!!!!!!!!!", imgUrl)
     try {
       await axios.post("http://localhost:8000/api/posts/", {
         title,
@@ -93,6 +115,7 @@ const BlogsForms = () => {
                       style={{ display: "none" }}
                       type="file"
                       id="file"
+                      name="titleimg"
                       onChange={(e) => setTitleImg(e.target.files[0])}
                     />
                   </div>
@@ -122,12 +145,12 @@ const BlogsForms = () => {
             {/* objective section */}
 
             <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
-              <div className="d-flex gap-5 w-100">
+              <div className="d-flex gap-5 w-100 justify-content-center">
                 <div>Objectives:</div>
                 <input
                   type="text"
                   onChange={(e) => setObjectives(e.target.value)}
-                  className="w-100"
+                  className=""
                   placeholder="Click and enter the text"
                 />
               </div>
@@ -135,12 +158,12 @@ const BlogsForms = () => {
 
             {/* component req */}
             <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
-              <div className="d-flex gap-5 w-100">
+              <div className="d-flex gap-5 w-100 justify-content-center">
                 <div>Components Required:</div>
                 <input
                   type="text"
                   onChange={(e) => setComponent(e.target.value)}
-                  className="w-100"
+                  className=""
                   placeholder="Click and enter the text"
                 />
               </div>
@@ -148,24 +171,27 @@ const BlogsForms = () => {
             {/* img component */}
             <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">Components img 1</label>
+                <label htmlFor="cfile">Components img 1</label>
                 <input
                   style={{ display: "none" }}
                   type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
+                  id="cfile"
+                  name="compimg"
+                  onChange={(e) => setComponentsImg(e.target.files[0])}
                 />
               </div>
             </div>
             {/* architecture img */}
             <div className="archi_label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">System Architecture Image</label>
+                <label htmlFor="SystemArcImage">
+                  System Architecture Image
+                </label>
                 <input
                   style={{ display: "none" }}
                   type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
+                  id="SystemArcImage"
+                  onChange={(e) => setsysAImg(e.target.files[0])}
                 />
               </div>
             </div>
@@ -192,12 +218,12 @@ const BlogsForms = () => {
             {/* system setup img 1 */}
             <div className="archi_label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">System setup 1 img</label>
+                <label htmlFor="ssimg1">System setup 1 img</label>
                 <input
                   style={{ display: "none" }}
                   type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
+                  id="ssimg1"
+                  onChange={(e) => setSysSetupImg1(e.target.files[0])}
                 />
               </div>
             </div>
@@ -214,12 +240,12 @@ const BlogsForms = () => {
             {/*System setup 2 img*/}
             <div className="archi_label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">System setup 2 img</label>
+                <label htmlFor="ssimg2">System setup 2 img</label>
                 <input
                   style={{ display: "none" }}
                   type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
+                  id="ssimg2"
+                  onChange={(e) => setSysSetupImg2(e.target.files[0])}
                 />
               </div>
             </div>
@@ -238,12 +264,12 @@ const BlogsForms = () => {
             {/*System setup 3 img*/}
             <div className="archi_label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">System setup 3 img</label>
+                <label htmlFor="ssimg3">System setup 3 img</label>
                 <input
                   style={{ display: "none" }}
                   type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
+                  id="ssimg3"
+                  onChange={(e) => setSysSetupImg3(e.target.files[0])}
                 />
               </div>
             </div>
@@ -263,23 +289,23 @@ const BlogsForms = () => {
             <div className="d-flex gap">
               <div className="archi_label d-flex justify-content-center align-items-center flex-column mt-4 w-100">
                 <div className="d-flex gap-5">
-                  <label htmlFor="file">Implementation setup img</label>
+                  <label htmlFor="impSImg">Implementation setup img</label>
                   <input
                     style={{ display: "none" }}
                     type="file"
-                    id="file"
-                    // onChange={(e) => setTitleImg(e.target.files[0])}
+                    id="impSImg"
+                    onChange={(e) => setImpImg(e.target.files[0])}
                   />
                 </div>
               </div>
               <div className="archi_label d-flex justify-content-center align-items-center flex-column mt-4 w-100">
                 <div className="d-flex gap-5">
-                  <label htmlFor="file">Implementation setup img</label>
+                  <label htmlFor="impSImg2">Implementation setup img</label>
                   <input
                     style={{ display: "none" }}
                     type="file"
-                    id="file"
-                    // onChange={(e) => setTitleImg(e.target.files[0])}
+                    id="impSImg2"
+                    onChange={(e) => setImpImg2(e.target.files[0])}
                   />
                 </div>
               </div>
@@ -312,13 +338,8 @@ const BlogsForms = () => {
             {/*Implementation setup description img*/}
             <div className="archi_label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
               <div className="d-flex gap-5">
-                <label htmlFor="file">Implementation setup</label>
-                <input
-                  style={{ display: "none" }}
-                  type="file"
-                  id="file"
-                  // onChange={(e) => setTitleImg(e.target.files[0])}
-                />
+                <label htmlFor="impSImg3">Implementation setup</label>
+                <input style={{ display: "none" }} type="text" />
               </div>
             </div>
             {/*Implementation setup description */}
@@ -338,23 +359,23 @@ const BlogsForms = () => {
             <div className="d-flex gap">
               <div className="archi_label d-flex justify-content-center align-items-center flex-column mt-4 w-100">
                 <div className="d-flex gap-5">
-                  <label htmlFor="file">Implementation setup img</label>
+                  <label htmlFor="impSImg3">Implementation setup img</label>
                   <input
                     style={{ display: "none" }}
                     type="file"
-                    id="file"
-                    // onChange={(e) => setTitleImg(e.target.files[0])}
+                    id="impSImg3"
+                    onChange={(e) => setImpImg3(e.target.files[0])}
                   />
                 </div>
               </div>
               <div className="archi_label d-flex justify-content-center align-items-center flex-column mt-4 w-100">
                 <div className="d-flex gap-5">
-                  <label htmlFor="file">Implementation setup img</label>
+                  <label htmlFor="impSImg4">Implementation setup img</label>
                   <input
                     style={{ display: "none" }}
                     type="file"
-                    id="file"
-                    // onChange={(e) => setTitleImg(e.target.files[0])}
+                    id="impSImg4"
+                    onChange={(e) => setImpImg4(e.target.files[0])}
                   />
                 </div>
               </div>
