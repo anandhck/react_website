@@ -63,6 +63,7 @@ const BlogsForms = () => {
          formData
        );
        console.log("Upload successful:", res.data);
+        return res.data;
      } catch (err) {
        console.error("Error uploading images:", err);
      }
@@ -95,7 +96,7 @@ const BlogsForms = () => {
         systemImpledescriptionFive: systemImpledescriptionFive,
         conclusion: conclusion,
         references: references,
-        acknowledment: acknowledment, 
+        acknowledment: acknowledment,
       }); 
     } catch (err) {
     console.log(err)
