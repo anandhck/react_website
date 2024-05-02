@@ -10,3 +10,12 @@ height: 6rem;
 height: 10rem;
 background-color: #EAE1E1;
 }
+
+.editor{
+background-color: #EAE1E1;
+color: rgb(0, 0, 0);
+}
+.editor li{
+color: rgb(0, 0, 0);
+list-style: disc;
+}

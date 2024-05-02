@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from 'axios';
 import moment from "moment";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 const BlogsForms = () => {
   const [title, setTitle] = useState("");
   const [shotDes, setSDes] = useState("");
@@ -106,7 +108,7 @@ const BlogsForms = () => {
     return (
       <>
         <section className="blogsf d-flex justify-content-center align-items-center height">
-          <div className="container mt-5">
+          <div className="container mar-t">
             <div className="row">
               <div className="col-md-6">
                 <div className="label gap-5 d-flex justify-content-center align-items-center flex-column h-100">
@@ -123,7 +125,7 @@ const BlogsForms = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-5">
+                <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
                   <div className="d-flex gap-5">
                     <div>TITLE</div>
                     <input
@@ -132,29 +134,41 @@ const BlogsForms = () => {
                     />
                   </div>
                 </div>
-                <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
-                  <div className="d-flex gap-5">
-                    <div>Short Description.</div>
-                    <input
+                <div className="editor mt-4 p-4">
+                  {/* <div className="d-flex gap-5"> */}
+                  <div>Short Description.</div>
+                  {/* <input
                       type="text"
                       onChange={(e) => setSDes(e.target.value)}
-                    />
-                  </div>
+                    /> */}
+                  <ReactQuill
+                    theme="snow"
+                    value={shotDes}
+                    onChange={setSDes}
+                    placeholder="Click and enter the text"
+                  />
+                  {/* </div> */}
                 </div>
               </div>
             </div>
             {/* objective section */}
 
-            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
-              <div className="d-flex gap-5 w-100 justify-content-center">
-                <div>Objectives:</div>
-                <input
+            <div className="editor mt-4 p-4">
+              {/* <div className="d-flex gap-5 w-100 justify-content-center"> */}
+              <div>Objectives:</div>
+              {/* <input
                   type="text"
                   onChange={(e) => setObjectives(e.target.value)}
                   className=""
                   placeholder="Click and enter the text"
-                />
-              </div>
+                /> */}
+              <ReactQuill
+                theme="snow"
+                value={objectives}
+                onChange={setObjectives}
+                placeholder="Click and enter the text"
+              />
+              {/* </div> */}
             </div>
 
             {/* component req */}

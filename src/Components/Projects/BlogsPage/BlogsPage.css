@@ -1,6 +1,34 @@
 .posttitle p{
-
-}
+color: rgb(255, 255, 255);
+font-size: clamp(1.0625rem, 2vw, 1rem);}
 .tbg{
 background-color: black;
 }
+/* .post img{
+height: 300px;
+width: 300px;
+} */
+
+.postdesc{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+height: 100%;
+}
+
+.mar-t{
+margin-top: 8rem;
+}
+.posttitle{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.obj_sction li{
+color: aliceblue;
+list-style: disc;
+}
+
