@@ -50,13 +50,13 @@ fetchData();
           {posts.map((post) => (
             <div key={post.id}>
               <div className="container mar-t">
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-md-7">
                     <div className="post">
-                      {/* <div className="img-container"> */}
+                     
                       <ImageDisplay imageName={post.titleimg} />
-                      {/* <ImageDisplay imageName={post.compimg} /> */}
-                      {/* </div> */}
+                     
+                     
                     </div>
                   </div>
                   <div className="col-md-5 posttitle">
@@ -65,45 +65,32 @@ fetchData();
                       <p>{post.desc}</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* objectivs section */}
-                <div className="obj_sction mt-5">
+                {/* <div className="obj_sction mt-5">
                   <label htmlFor="object" className="text-white">
                     Objectives:
                   </label>
                   <p>{post.objectives}</p>
-                  <ol className="text-white" id="object">
-                    <li>
-                      Develop a system to remotely control home appliances and
-                      devices.
-                    </li>
-                    <li>
-                      Integrate Arduino and Raspberry Pi for sensor data
-                      acquisition and control.
-                    </li>
-                    <li>
-                      Implement a user-friendly interface for remote access and
-                      control.{" "}
-                    </li>
-                    <li>Enhance energy efficiency and home security.</li>
-                  </ol>
-                </div>
-                {/* component section */}
+               
                 <div className="row mt-4">
                   <div className="col-md-6">
                     <div className="post">
-                      {/* <div className="img-container"> */}
-
+                      
                       <ImageDisplay imageName={post.compimg} />
-                      {/* </div> */}
+                     
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="postdesc">
-                      <h3 className="text-white">{post.component}</h3>
-                      {/* <p>{post.desc}</p> */}
+                    <div className="container w-100">
+                      <div dangerouslySetInnerHTML={{ __html: post.content }} />
                     </div>
                   </div>
+                </div>
+              </div> */}
+                {/* blog content */}
+                <div className="container w-100">
+                  <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </div>
               </div>
             </div>
