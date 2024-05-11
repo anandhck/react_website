@@ -21,11 +21,13 @@ margin-left: -4rem;
 
 .sub_title li:hover{
 color: #0db82a;
+cursor: pointer;
 }
 
 .sub_title li{
 gap: 10px;
 margin: 10px;
+color: white;
 }
 .txt_hover p
 {

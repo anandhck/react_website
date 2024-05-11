@@ -20,14 +20,14 @@ code {
 
 a{
 text-decoration: none !important;
-color: aliceblue !important;
+/* color: aliceblue !important; */
 }
 
 h3{
 font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-color: white !important;
+/* color: white !important; */
 }
 
 p{
@@ -35,8 +35,8 @@ p{
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-color: white;
-font-size: clamp(1.0625rem, 2vw, 1.5rem);
+/* color: white; */
+/* font-size: clamp(1.0625rem, 2vw, 1.5rem); */
 }
 .blur_bg{
 backdrop-filter: blur(10px);
@@ -49,7 +49,7 @@ background: transparent;
 
 ul li {
 list-style: none;
-color: white;
+/* color: white; */
 }
 
 .height{

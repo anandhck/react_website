@@ -38,7 +38,7 @@ const CardAnimation = () => {
                 data-aos-duration="2000"
                 className="text-center d-flex show_hover"
               >
-                <div className="txt_hover">
+                <div className="txt_hover text-white">
                   <h3>Our Comprehensive Services</h3>
                   <p>
                     At Charmzz Techs, we excel in providing a spectrum of
@@ -61,10 +61,7 @@ const CardAnimation = () => {
                   </p>
                   <Button variant="outline-success">Explore More</Button>{" "}
                 </div>
-                <div
-                  className="sub_title blur_bg"
-                  id="text_content"
-                >
+                <div className="sub_title blur_bg text-white" id="text_content">
                   <ul>
                     <li>ROBOTICS AND AUTOMATION</li>
                     <li>DIY PROJECTS</li>

@@ -1,6 +1,4 @@
-/* .slb{
-background-color: #EFD7D7;
-} */
+
 .slb::before {
   background-image: url("../../../../assets/Services/background.png");
   content: "";
@@ -33,8 +31,8 @@ border-radius: 20px;
 }
 .mf {
   display: flex;
-  justify-content: center !important;
-  align-items: start !important;
+  justify-content: center;
+  align-items: start;
   flex-direction: column;
 }
 .slb_img img {
@@ -78,8 +76,8 @@ border-radius: 20px;
   }
   .mf {
     display: flex;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: center ;
+    align-items: center ;
     flex-direction: column;
   }
 }

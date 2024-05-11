@@ -39,6 +39,7 @@ import UploadProjects from './Components/Projects/UploadProjects/UploadProjects'
 import BlogsForms from './Components/Projects/Blogs/BlogsForms';
 import RoboticsFirst from './Components/Projects/Robotics/RoboticsFirst/RoboticsFirst';
 import BlogsPage from './Components/Projects/BlogsPage/BlogsPage';
+import Others from './Components/Projects/Others/Others';
 function App() {
   return (
     <>
@@ -103,7 +104,10 @@ function App() {
           {/* blogs forms */}
           <Route path='/blogsform' element={<BlogsForms />} />
           {/* blogs page */}
-                    <Route path='/blogspage' element={<BlogsPage />} />
+          <Route path='/blogspage/:id' element={<BlogsPage />} />
+          
+          <Route path='/othersprojects' element={<Others />} />
+
 
           
         </Routes>

@@ -29,27 +29,27 @@ const IntroSection = () => {
           </div>
 
           {/* circle animation end */}
-              {/* <!-- square animation start --> */}
-           
-            <div class="outer-box">
-                <div class="middle-box">
-                    {/* <!-- square ball start --> */}
-                    <div class="inner-box">
-                        <div class="square_ball square_inside_ball"></div>
-                    </div>
-                    <div class="square_ball square_middle_ball"></div>
-                </div>
-                <div class="square_ball square_outer_ball"></div>
-                {/* <!-- square ball end --> */}
+          {/* <!-- square animation start --> */}
+
+          <div class="outer-box">
+            <div class="middle-box">
+              {/* <!-- square ball start --> */}
+              <div class="inner-box">
+                <div class="square_ball square_inside_ball"></div>
+              </div>
+              <div class="square_ball square_middle_ball"></div>
             </div>
-            
-             {/* square animation end  */}
+            <div class="square_ball square_outer_ball"></div>
+            {/* <!-- square ball end --> */}
+          </div>
+
+          {/* square animation end  */}
           {/* text box start */}
           <div className="row blur_bg p-5 ms-5 me-5 mt-3">
             <h3 className="text-center text-white">
               Charmzz Techs is a leading technology company dedicated
             </h3>
-            <div className="col-6 right-border-v text-end p-3">
+            <div className="col-6 right-border-v text-end p-3 text-white">
               <p
                 data-aos="fade-right"
                 data-aos-duration="1000"

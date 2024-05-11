@@ -18,7 +18,7 @@ const JobCards = () => {
     return (
       <>
         <Parallax strength={600} bgImage={cardimg} className="parallax_height">
-          <CardGroup className="custume_margin" id='jobcard'>
+          <CardGroup className="custume_margin" id="jobcard">
             <Card
               data-aos="slide-right"
               data-aos-easing="ease-in-sine"
@@ -29,7 +29,7 @@ const JobCards = () => {
                 <Card.Title className="text-center text-danger">
                   VACANCY
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="text-white">
                   Unlock real-world experience with our dynamic internship
                   opportunities – Shape your future with hands-on learning
                 </Card.Text>
@@ -46,7 +46,7 @@ const JobCards = () => {
                 <Card.Title className="text-center text-danger">
                   INTERNSHIP
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="text-white">
                   Unlock real-world experience with our dynamic internship
                   opportunities – Shape your future with hands-on learning
                 </Card.Text>
@@ -63,7 +63,7 @@ const JobCards = () => {
                 <Card.Title className="text-center text-danger">
                   WORKSHOP
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="text-white">
                   Unlock real-world experience with our dynamic internship
                   opportunities – Shape your future with hands-on learning
                 </Card.Text>

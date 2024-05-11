@@ -1,79 +1,120 @@
 import React, { useState, useRef, useMemo } from "react";
-// import { CKEditor } from "ckeditor4-react";
-// import ReactQuill from "react-quill";
-// import Quill from "quill";
-import "react-quill/dist/quill.snow.css";
-// import ImageResize from "quill-image-resize-module";
 import "./BlogsForms.css";
 import Button from "react-bootstrap/Button";
 import { Link} from "react-router-dom";
 import axios from 'axios';
 import moment from "moment";
-// import { CKEditor } from "@ckeditor/ckeditor5-react";
-// import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-// if (typeof window !== "undefined" && window.Quill) {
-//   Quill.register("modules/imageResize", ImageResize);
-// }
+
 // joeditor
 import JoditEditor from "jodit-react";
 
 const BlogsForms = ({ placeholder }) => {
   // blog content
-  const [editorData, setEditorData] = useState("");
+  // const [editorData, setEditorData] = useState("");
 
-  const [title, setTitle] = useState("");
-  const [shotDes, setSDes] = useState("");
+  // const [shotDes, setSDes] = useState("");
   // store all img id
   // const [imageData, setImageData] = useState({});
-  const [cat, setCat] = useState("robotics");
-  const [objectives, setObjectives] = useState("");
-  const [component, setComponent] = useState("");
-  const [architecturedesc, setArchitecturedesc] = useState("");
-  const [systemSetup, setsystemSetup] = useState("");
-  const [systemSetupdescription, setsystemSetupdescription] = useState("");
-  const [systemSecondSetupdescription, setsystemSecondSetupdescription] =
-    useState("");
-  const [systemSetupThreedescription, setsystemSetupThreedescription] =
-    useState("");
-  const [systemImpledescription, setsystemImpledescription] = useState("");
-  const [systemImpledescriptionTwo, setsetsystemImpledescriptionTwo] =
-    useState("");
-  const [systemImpledescriptionThree, setsystemImpledescriptionThree] =
-    useState("");
-  const [systemImpledescriptionFour, setsystemImpledescriptionFour] =
-    useState("");
-  const [systemImpledescriptionFive, setsystemImpledescriptionFive] =
-    useState("");
-  const [conclusion, setConclusion] = useState("");
-  const [references, setReferences] = useState("");
-  const [acknowledment, setAcknowledment] = useState("");
+  // const [cat, setCat] = useState("robotics");
+  // const [objectives, setObjectives] = useState("");
+  // const [component, setComponent] = useState("");
+  // const [architecturedesc, setArchitecturedesc] = useState("");
+  // const [systemSetup, setsystemSetup] = useState("");
+  // const [systemSetupdescription, setsystemSetupdescription] = useState("");
+  // const [systemSecondSetupdescription, setsystemSecondSetupdescription] =
+  //   useState("");
+  // const [systemSetupThreedescription, setsystemSetupThreedescription] =
+  //   useState("");
+  // const [systemImpledescription, setsystemImpledescription] = useState("");
+  // const [systemImpledescriptionTwo, setsetsystemImpledescriptionTwo] =
+  //   useState("");
+  // const [systemImpledescriptionThree, setsystemImpledescriptionThree] =
+  //   useState("");
+  // const [systemImpledescriptionFour, setsystemImpledescriptionFour] =
+  //   useState("");
+  // const [systemImpledescriptionFive, setsystemImpledescriptionFive] =
+  //   useState("");
+  // const [conclusion, setConclusion] = useState("");
+  // const [references, setReferences] = useState("");
+  // const [acknowledment, setAcknowledment] = useState("");
   // imges
-  const [tImg, setTitleImg] = useState(null);
-  const [componentsImg, setComponentsImg] = useState(null);
-  const [sysAImg, setsysAImg] = useState(null);
-  const [sysSetupImg1, setSysSetupImg1] = useState(null);
-  const [sysSetupImg2, setSysSetupImg2] = useState(null);
-  const [sysSetupImg3, setSysSetupImg3] = useState(null);
-  const [impImg, setImpImg] = useState(null);
-  const [impImg2, setImpImg2] = useState(null);
-  const [impImg3, setImpImg3] = useState(null);
-  const [impImg4, setImpImg4] = useState(null);
+  // const [tImg, setTitleImg] = useState(null);
+  // const [componentsImg, setComponentsImg] = useState(null);
+  // const [sysAImg, setsysAImg] = useState(null);
+  // const [sysSetupImg1, setSysSetupImg1] = useState(null);
+  // const [sysSetupImg2, setSysSetupImg2] = useState(null);
+  // const [sysSetupImg3, setSysSetupImg3] = useState(null);
+  // const [impImg, setImpImg] = useState(null);
+  // const [impImg2, setImpImg2] = useState(null);
+  // const [impImg3, setImpImg3] = useState(null);
+  // const [impImg4, setImpImg4] = useState(null);
 
+  // const uploadImages = async () => {
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("titleimg", tImg);
+  //     formData.append("compimg", componentsImg);
+  //     formData.append("sysAImg", sysAImg);
+  //     formData.append("sysSetupImg1", sysSetupImg1);
+  //     formData.append("sysSetupImg2", sysSetupImg2);
+  //     formData.append("sysSetupImg3", sysSetupImg3);
+  //     formData.append("impImg", impImg);
+  //     formData.append("impImg2", impImg2);
+  //     formData.append("impImg3", impImg3);
+  //     formData.append("impImg4", impImg4);
+
+  //     console.log("formdata", formData);
+  //     const res = await axios.post(
+  //       "http://localhost:8000/api/upload",
+  //       formData
+  //     );
+  //     console.log("Upload successful:", res.data);
+  //     return res.data;
+  //   } catch (err) {
+  //     console.error("Error uploading images:", err);
+  //   }
+  // };
+
+  // const HandleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   // const imgUrl = await uploadImages();
+  //   // console.log("imgcheck!!!!!!!!!!!!", imgUrl);
+  //   try {
+  //     await axios.post("http://localhost:8000/api/posts/", {
+  //       title,
+  //       content: content,
+  //       category: "test"
+  //       // img: imgUrl,te.now()).format("YYYY-MM-DD HH:mm:ss"),
+  //       // cat: cat,
+  //       // objectives: "test",
+  //       // architecturedesc: architecturedesc,
+  //       // component: component,
+  //       // systemSetup: systemSetup,
+  //       // systemSetupdescription: systemSetupdescription,
+  //       // systemSecondSetupdescription: systemSecondSetupdescription,
+  //       // systemSetupThreedescription: systemSetupThreedescription,
+  //       // systemImpledescription: systemImpledescription,
+  //       // systemImpledescriptionTwo: systemImpledescriptionTwo,
+  //       // systemImpledescriptionThree: systemImpledescriptionThree,
+  //       // systemImpledescriptionFour: systemImpledescriptionFour,
+  //       // systemImpledescriptionFive: systemImpledescriptionFive,
+  //       // conclusion: conclusion,
+  //       // references: references,
+  //       // acknowledment: acknowledment,
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  // img upload function
+  const [coverImg, setCoverImg] = useState(null);
   const uploadImages = async () => {
     try {
       const formData = new FormData();
-      formData.append("titleimg", tImg);
-      formData.append("compimg", componentsImg);
-      formData.append("sysAImg", sysAImg);
-      formData.append("sysSetupImg1", sysSetupImg1);
-      formData.append("sysSetupImg2", sysSetupImg2);
-      formData.append("sysSetupImg3", sysSetupImg3);
-      formData.append("impImg", impImg);
-      formData.append("impImg2", impImg2);
-      formData.append("impImg3", impImg3);
-      formData.append("impImg4", impImg4);
-     
-      console.log("formdata", formData);
+      formData.append("coverImg", coverImg);
+      console.log("coverimg", coverImg);
       const res = await axios.post(
         "http://localhost:8000/api/upload",
         formData
@@ -87,32 +128,14 @@ const BlogsForms = ({ placeholder }) => {
 
   const HandleSubmit = async (e) => {
     e.preventDefault();
-
-    // const imgUrl = await uploadImages();
-    // console.log("imgcheck!!!!!!!!!!!!", imgUrl);
+    const imgUrl = await uploadImages();
+    console.log("imgurl", imgUrl);
     try {
       await axios.post("http://localhost:8000/api/posts/", {
         title,
         content: content,
-        // desc: "test",
-        // img: imgUrl,
-        // date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
-        // cat: cat,
-        // objectives: "test",
-        // architecturedesc: architecturedesc,
-        // component: component,
-        // systemSetup: systemSetup,
-        // systemSetupdescription: systemSetupdescription,
-        // systemSecondSetupdescription: systemSecondSetupdescription,
-        // systemSetupThreedescription: systemSetupThreedescription,
-        // systemImpledescription: systemImpledescription,
-        // systemImpledescriptionTwo: systemImpledescriptionTwo,
-        // systemImpledescriptionThree: systemImpledescriptionThree,
-        // systemImpledescriptionFour: systemImpledescriptionFour,
-        // systemImpledescriptionFive: systemImpledescriptionFive,
-        // conclusion: conclusion,
-        // references: references,
-        // acknowledment: acknowledment,
+        category: category,
+        coverImage: imgUrl,
       });
     } catch (err) {
       console.log(err);
@@ -152,8 +175,10 @@ const BlogsForms = ({ placeholder }) => {
   //     },
   //   },
   // };
+  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  
+  const [category, setCategory] = useState("robotics");
+
   console.log("content", content);
   const editor = useRef(null);
   const config = useMemo(
@@ -168,29 +193,55 @@ const BlogsForms = ({ placeholder }) => {
       <section className="blogsf d-flex justify-content-center align-items-center height">
         <div className="container mar-t">
           <div className="row">
-            <div>
-              <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
-                <div className="d-flex gap-5">
-                  <div>TITLE</div>
-                  <input
-                    type="text"
-                    onChange={(e) => setTitle(e.target.value)}
-                  />
-                </div>
+            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
+              <div className="d-flex gap-5">
+                <div>TITLE</div>
+                <input type="text" onChange={(e) => setTitle(e.target.value)} />
               </div>
-              <div className="editor mt-4 p-4">
-                {/* <div className="d-flex gap-5"> */}
-                <div>Short Description.</div>
-                <JoditEditor
-                  ref={editor}
-                  value={content}
-                  config={config}
-                  tabIndex={1} // tabIndex of textarea
-                  onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-                  onChange={(newContent) => {}}
+            </div>
+            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
+              <div className="d-flex gap-5 w-100 justify-content-center">
+                <div>Category</div>
+                <select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                  
+                >
+                  <option value="">Select a category</option>
+                  <option value="robotics">Robotics</option>
+                  <option value="design">3D Design</option>
+                  <option value="diyProjects">DiyProjects</option>
+                  <option value="softwaredev">SOFTWARE DEVELOPMENT</option>
+                  <option value="iot">IOT</option>
+                  <option value="webapp">WEB APP AND DESIGING</option>
+                  <option value="others">OTHERS</option>
+                  {/* Add more options as needed */}
+                </select>
+              </div>
+            </div>
+            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
+              <div className="d-flex gap-5">
+                <label htmlFor="cfile">CoverImage</label>
+                <input
+                  type="file"
+                  id="cfile"
+                  name="compimg"
+                  onChange={(e) => setCoverImg(e.target.files[0])}
                 />
-                {/* </div> */}
               </div>
+            </div>
+            <div className="editor mt-4 p-4">
+              {/* <div className="d-flex gap-5"> */}
+              <div>Short Description.</div>
+              <JoditEditor
+                ref={editor}
+                value={content}
+                config={config}
+                tabIndex={1} // tabIndex of textarea
+                onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                onChange={(newContent) => {}}
+              />
+              {/* </div> */}
             </div>
           </div>
           {/* objective section */}
@@ -215,7 +266,6 @@ const BlogsForms = ({ placeholder }) => {
             />
           </div> */}
 
-          
           {/* <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
             <div className="d-flex gap-5 w-100 justify-content-center">
               <div>Components Required:</div>
@@ -486,15 +536,15 @@ const BlogsForms = ({ placeholder }) => {
               />
             </div>
           </div> */}
-         
+
           <div className="d-flex justify-content-center gap mt-4">
             <Button variant="success" onClick={HandleSubmit}>
               Save and Exit
             </Button>
 
-            <Link to="/blogspage">
+            {/* <Link to="/blogspage">
               <Button variant="danger">Preview and publish</Button>{" "}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

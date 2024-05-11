@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./RoboticsFirst.css";
-import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import card1 from "../../../../assets/Projects/card1.png";
 import card2 from "../../../../assets/Projects/card2.png";
@@ -10,45 +9,50 @@ import card5 from "../../../../assets/Projects/card5.png";
 import card6 from "../../../../assets/Projects/card6.png";
 import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
+import Category from '../../Category/Category';
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ProjectCard from '../../ProjectCard/ProjectCard';
+
 const RoboticsFirst = () => {
+  
+  const [data, setData] = useState([]);
+  console.log("Data:", data);
+  useEffect(() => {
+    loadBlogsData();
+  }, [])
+  
+  const loadBlogsData = async () => {    
+    try {
+      const res = await axios.get("http://localhost:8000/api/posts");
+      if (res.status === 200) {
+        console.log("data check", res.data);
+      setData(res.data); 
+      } else {
+      toast.error("Something went wrong")
+      }    
+    } catch(err) {
+    toast(err)
+    } 
+   
+  }
+  console.log("dta", data)
+    
+  const excerpt = (str) => {
+    if (str.length > 50) {
+      str = str.substring(0, 50) + "...";
+    }
+    return str;
+  }
+  
     return (
       <>
         <section className="projectbg height">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-md-2">
-                <div className="sidebar dark_blur_bg d-flex justify-content-center flex-column align-items-center">
-                  <Link to="/uploadprojects">
-                    <Button variant="outline-info" className="mt-3">
-                      Upload Projects
-                    </Button>
-                  </Link>
-                  <ul>
-                    <li>
-                      <Link to="/roboticsprojects">
-                        ROBOTICS AND AUTOMATION
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/diyprojects">DIY PROJECTS</Link>
-                    </li>
-                    <li>
-                      <Link to="/softwaredev">SOFTWARE DEVELOPMENT</Link>
-                    </li>
-                    <li>
-                      <Link to="/iot">IOT</Link>
-                    </li>
-                    <li>
-                      <Link to="/webapp">WEB APP AND DESIGING</Link>
-                    </li>
-                    <li>
-                      <Link to="/design">3D DESIGING AND PRINTING</Link>
-                    </li>
-                    <li>
-                      <Link to="/project">OTHERS</Link>
-                    </li>
-                  </ul>
-                </div>
+                <Category />
               </div>
               <div className="col-md-8">
                 <div className="d-flex">
@@ -153,6 +157,24 @@ const RoboticsFirst = () => {
                         <Button variant="outline-info">READ MORE</Button>
                       </Card.Footer>
                     </Card>
+                  </CardGroup>
+                  <CardGroup className="mt-2 pcard flex-column align-items-center">
+                    <div className="title">
+                      <h4 className="text-white">Uploaded Projects</h4>
+                    </div>
+                    <div className="row">
+                      {data &&
+                        data.map(
+                          (item, index) =>
+                            item.category === "robotics" ? (
+                              <ProjectCard
+                                key={index}
+                                {...item}
+                                excerpt={excerpt}
+                              />
+                            ) : null // or render another component
+                        )}
+                    </div>
                   </CardGroup>
                 </div>
               </div>
