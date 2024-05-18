@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Header.css';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { Dropdown, SplitButton } from "react-bootstrap";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from "react-bootstrap/Button";
-const Header = () => {
+import { AuthContext } from '../../context/authContext';
 
+
+  
+
+const Header = () => {
+  const { currentUser, logout, login } = useContext(AuthContext);
+  
+  console.log("currentuser", currentUser, login);
     const [menu, setMenu] = useState('home')
     return (
       <>
-        <nav className="navbar navbar-expand-xl bg-transparent fixed-top">
+        <nav className="navbar navbar-expand-xl sticky-top">
           <div className="container-fluid">
             <img className="navbar-brand" src={logo} alt="logo" />
             <button
@@ -107,15 +114,26 @@ const Header = () => {
                 <button type="button" className="btn btn-outline-info me-2">
                   SEARCH
                 </button>
-                <button type="button" class="btn btn-outline-danger">
-                  <Link to="/login">LOGIN</Link>
-                </button>
+                {currentUser ? (
+                  <Link to="/diyprojects">
+                    <span className="btn btn-outline-danger" onClick={logout}>
+                      Logout
+                    </span>
+                  </Link>
+                ) : (
+                  <Link to="/userlogin">
+                    <Button className="mt-3 btn btn-outline-danger">
+                      Login
+                    </Button>
+                  </Link>
+                )}
               </form>
             </div>
           </div>
         </nav>
       </>
     );
+    
 }
 
 export default Header

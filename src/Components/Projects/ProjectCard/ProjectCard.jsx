@@ -21,14 +21,14 @@ const ProjectCard = ({ title, category, content, id, coverImage, excerpt }) => {
     }, [imageName]);
 
     return imageUrl ? (
-      <img src={imageUrl} alt="img" className="img-fluid" />
+      <img src={imageUrl} alt="img" className="card-img-p" />
     ) : (
       "Loading..."
     );
   };
   return (
     <>
-      <Card className="dark_blur_bg ms-1" style={{ maxWidth: "20rem" }}>
+      <Card className="dark_blur_bg">
         <div className="dark_blur_bg text-center">
           <Card.Title>{title}</Card.Title>
         </div>
@@ -36,8 +36,12 @@ const ProjectCard = ({ title, category, content, id, coverImage, excerpt }) => {
         <Card.Body className="dark_blur_bg d-flex flex-column align-items-center justify-content-center">
           <Card.Text dangerouslySetInnerHTML={{ __html: excerpt(content) }} />
         </Card.Body>
-        <Card.Footer className="text-muted dark_blur_bg d-flex justify-content-center">
-          <Link to={`/blogspage/${id}`}>Read More</Link>
+        <Card.Footer className="text-muted dark_blur_bg d-flex justify-content-between">
+          
+            <Link to={`/blogspage/${id}`}>Read More</Link>
+            <span>Edit</span>
+            <span>Delete</span>
+          
         </Card.Footer>
       </Card>
     </>

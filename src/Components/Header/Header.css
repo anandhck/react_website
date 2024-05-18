@@ -17,15 +17,21 @@ body {
     white-space: nowrap;
     cursor: pointer;
 }
-
+/* navbar */
+.navbar{
+background-color: black;
+height: 5rem;
+}
 
 /* logo property */
 
 .navbar-brand {
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
 }
-
+.navbar-nav .nav-item a{
+color: #ffffff;
+}
 
 /* logo end */
 

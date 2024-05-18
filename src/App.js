@@ -35,11 +35,12 @@ import SoftwareDevFirst from './Components/Projects/SoftwareDev/SoftwareDevFirst
 import IOTFirst from './Components/Projects/IOT/IOTFirst';
 import WebAppFirst from './Components/Projects/WebApp/WebAppFirst';
 import DesignPrintingFirst from './Components/Projects/DesignPrinting/DesignPrintingFirst';
-import UploadProjects from './Components/Projects/UploadProjects/UploadProjects';
+import Register from './Components/Projects/Register/Register';
 import BlogsForms from './Components/Projects/Blogs/BlogsForms';
 import RoboticsFirst from './Components/Projects/Robotics/RoboticsFirst/RoboticsFirst';
 import BlogsPage from './Components/Projects/BlogsPage/BlogsPage';
 import Others from './Components/Projects/Others/Others';
+import ProjectLogin from './Components/Projects/ProjectLogin/ProjectLogin';
 function App() {
   return (
     <>
@@ -100,13 +101,16 @@ function App() {
           {/* 3d design */}
           <Route path='/design' element={<DesignPrintingFirst />} />
           {/* upload projects */}
-          <Route path='/uploadprojects' element={<UploadProjects />} />
+          <Route path='/register' element={<Register />} />
           {/* blogs forms */}
           <Route path='/blogsform' element={<BlogsForms />} />
           {/* blogs page */}
           <Route path='/blogspage/:id' element={<BlogsPage />} />
           
           <Route path='/othersprojects' element={<Others />} />
+          
+          {/* project user login */}
+                    <Route path='/userlogin' element={<ProjectLogin />} />
 
 
           

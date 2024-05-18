@@ -36,11 +36,19 @@ const DIYProjectsFirst = () => {
   };
   console.log("dta", data);
 
-  const excerpt = (str) => {
-    if (str.length > 50) {
-      str = str.substring(0, 50) + "...";
+  const stripHtmlTags = (html) => {
+    return html.replace(/<[^>]*>?/gm, "");
+  };
+
+  const excerpt = (str, maxLength) => {
+    // Remove HTML tags from the content
+    const plainText = stripHtmlTags(str);
+
+    // Truncate the plain text to the desired length
+    if (plainText.length > maxLength) {
+      return plainText.substring(0, maxLength) + "...";
     }
-    return str;
+    return plainText;
   };
   
   return (
@@ -169,7 +177,7 @@ const DIYProjectsFirst = () => {
                             <ProjectCard
                               key={index}
                               {...item}
-                              excerpt={excerpt}
+                              excerpt={(str) => excerpt(str, 100)}
                             />
                           ) : null // or render another component
                       )}
