@@ -1,17 +1,51 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import "./BlogsForms.css";
 import Button from "react-bootstrap/Button";
-import { Link} from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import axios from 'axios';
 import moment from "moment";
 
 // joeditor
 import JoditEditor from "jodit-react";
 
-const BlogsForms = ({ placeholder, username, email }) => {
+const BlogsForms = ({ placeholder}) => {
  
+  const state = useLocation();
+  
+  console.log("state", state.state);
+  
+  
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [category, setCategory] = useState("robotics");
   // img upload function
   const [coverImg, setCoverImg] = useState(null);
+  
+  
+  
+  const { id } = useParams();
+  
+  useEffect(() => {
+    if (id) {
+      fetchBlogData();
+    }
+  }, [id]);
+
+  const fetchBlogData = async () => {
+    try {
+      const response = await axios.get(`http://localhost:8000/api/posts/${id}`);
+      const data = response.data[0];
+      console.log("datadatadatav", data);
+      setTitle(data.title);
+      setContent(data.content);
+      setCategory(data.category);
+      setCoverImg(data.coverImage);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
+  
   const uploadImages = async () => {
     try {
       const formData = new FormData();
@@ -28,31 +62,54 @@ const BlogsForms = ({ placeholder, username, email }) => {
     }
   };
 
-  const HandleSubmit = async (e) => {
+  // const HandleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const imgUrl = await uploadImages();
+  //   try {
+  //     await axios.post("http://localhost:8000/api/posts/", {
+  //       title,
+  //       content: content,
+  //       category: category,
+  //       coverImage: imgUrl,
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const imgUrl = await uploadImages();
-    console.log("imgurl", imgUrl);
+    let imgUrl = coverImg; // Use the existing image URL if no new image is uploaded
+
+    if (coverImg && typeof coverImg === "object") {
+      imgUrl = await uploadImages();
+    }
+
+    const postData = {
+      title,
+      content,
+      category,
+      coverImage: imgUrl,
+    };
+
     try {
-      await axios.post("http://localhost:8000/api/posts/", {
-        username: username,
-        email: email,
-        title,
-        content: content,
-        category: category,
-        coverImage: imgUrl,
-      });
+      if (id) {
+        console.log("postData", postData);
+        // Update existing post
+        await axios.put(`http://localhost:8000/api/posts/${id}`, postData , { withCredentials: true });
+      } else {
+        console.log("crate", postData);
+        // Create new post
+        await axios.post("http://localhost:8000/api/posts/", postData, {
+          withCredentials: true,
+        });
+      }
+      // history.push("/"); // Redirect to home or another appropriate route
     } catch (err) {
       console.log(err);
     }
   };
 
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [category, setCategory] = useState("robotics");
-  // const [username, setUserName] = useState("");
-  // const [email, setEmail] = useState("");
 
-  console.log("content", content);
   const editor = useRef(null);
   const config = useMemo(
     () => ({
@@ -66,26 +123,14 @@ const BlogsForms = ({ placeholder, username, email }) => {
       <section className="blogsf d-flex justify-content-center align-items-center height">
         <div className="container mar-t">
           <div className="row">
-            {/* user details */}
-            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
-              <div className="d-flex gap-5">
-                <div>Username</div>
-                <input
-                  type="text"
-                  // onChange={(e) => setUserName(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
-              <div className="d-flex gap-5">
-                <div>Email</div>
-                <input type="text" value={username} />
-              </div>
-            </div>
             <div className="label gap-5 d-flex justify-content-center align-items-center flex-column">
               <div className="d-flex gap-5">
                 <div>TITLE</div>
-                <input type="text" onChange={(e) => setTitle(e.target.value)} />
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
               </div>
             </div>
             <div className="label gap-5 d-flex justify-content-center align-items-center flex-column mt-4">
@@ -133,13 +178,9 @@ const BlogsForms = ({ placeholder, username, email }) => {
             </div>
           </div>
           <div className="d-flex justify-content-center gap mt-4">
-            <Button variant="success" onClick={HandleSubmit}>
+            <Button variant="success" onClick={handleSubmit}>
               Save and Exit
             </Button>
-
-            {/* <Link to="/blogspage">
-              <Button variant="danger">Preview and publish</Button>{" "}
-            </Link> */}
           </div>
         </div>
       </section>

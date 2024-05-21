@@ -104,6 +104,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           {/* blogs forms */}
           <Route path='/blogsform' element={<BlogsForms />} />
+           <Route path="/blogsform/:id" element={<BlogsForms />} />
           {/* blogs page */}
           <Route path='/blogspage/:id' element={<BlogsPage />} />
           

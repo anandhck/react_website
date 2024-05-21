@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import './Header.css';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { Dropdown, SplitButton } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from "react-bootstrap/Button";
 import { AuthContext } from '../../context/authContext';

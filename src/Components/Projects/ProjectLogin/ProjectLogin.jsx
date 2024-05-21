@@ -26,11 +26,15 @@ const ProjectLogin = () => {
     try {
       e.preventDefault();
       console.log("click");
-      await login(inputs)
+      await login(inputs);
       navigate("/blogsform");
     } catch (err) {
-      console.log(err);
-      serErorr(err.response.data)
+      console.error(err);
+      if (err.response) {
+        serErorr(err.response.data); // Handle the error from the server
+      } else {
+        serErorr("An unexpected error occurred."); // Handle network errors or other unexpected errors
+      }
     }
   };
 
