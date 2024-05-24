@@ -41,10 +41,13 @@ import RoboticsFirst from './Components/Projects/Robotics/RoboticsFirst/Robotics
 import BlogsPage from './Components/Projects/BlogsPage/BlogsPage';
 import Others from './Components/Projects/Others/Others';
 import ProjectLogin from './Components/Projects/ProjectLogin/ProjectLogin';
+import { ToastContainer } from 'react-toastify';
+
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />

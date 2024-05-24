@@ -5,11 +5,14 @@ import { Link, useNavigate } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { AuthContext } from "../../../context/authContext";
+
+
 const ProjectLogin = () => {
   const [inputs, SetInputs] = useState({
     username: "",
     password: "",
   });
+  
   const handleChange = (e) => {
     SetInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -25,11 +28,9 @@ const ProjectLogin = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      console.log("click");
       await login(inputs);
       navigate("/blogsform");
     } catch (err) {
-      console.error(err);
       if (err.response) {
         serErorr(err.response.data); // Handle the error from the server
       } else {

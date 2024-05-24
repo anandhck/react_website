@@ -17,7 +17,6 @@ const Others = () => {
     try {
       const res = await axios.get("http://localhost:8000/api/posts");
       if (res.status === 200) {
-        console.log("data check", res.data);
         setData(res.data);
       } else {
         toast.error("Something went wrong");
@@ -51,7 +50,7 @@ const Others = () => {
                   {data &&
                     data.map(
                       (item, index) =>
-                        item.category === "others" ? (
+                        item.category === "othersprojects" ? (
                           <ProjectCard
                             key={index}
                             {...item}

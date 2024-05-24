@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { AuthContextProvider } from './context/authContext.js';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import studio from "@theatre/studio";
 // import extension from '@theatre/r3f/dist/extension'

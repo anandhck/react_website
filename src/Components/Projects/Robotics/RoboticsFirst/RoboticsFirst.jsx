@@ -20,7 +20,6 @@ const RoboticsFirst = () => {
     try {
       const res = await axios.get("http://localhost:8000/api/posts");
       if (res.status === 200) {
-        console.log("data check", res.data);
       setData(res.data); 
       } else {
       toast.error("Something went wrong")
@@ -62,7 +61,7 @@ const RoboticsFirst = () => {
                 <Row xs={1} md={3}>
                   {data &&
                     data.map((item, index) =>
-                      item.category === "robotics" ? (
+                      item.category === "roboticsprojects" ? (
                         <Col key={index} className="mb-4 robo mt-5">
                           {/* Add margin bottom for spacing */}
                           <ProjectCard

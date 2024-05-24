@@ -173,7 +173,7 @@ const DIYProjectsFirst = () => {
                     {data &&
                       data.map(
                         (item, index) =>
-                          item.category === "diyProjects" ? (
+                          item.category === "diyprojects" ? (
                             <ProjectCard
                               key={index}
                               {...item}

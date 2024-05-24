@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Link, useLocation } from "react-router-dom";
-const ProjectCard = ({ title, category, content, id, coverImage, excerpt }) => {
+const ProjectCard = ({ title, category, content, id, coverImage, description, excerpt }) => {
   const ImageDisplay = ({ imageName }) => {
     const [imageUrl, setImageUrl] = useState(null);
     const state = useLocation().state
     
-    console.log("state", state);
+    console.log("state!!!!!!!!!!!!!!!1", description);
     useEffect(() => {
       const fetchImage = async () => {
         try {
@@ -36,11 +36,12 @@ const ProjectCard = ({ title, category, content, id, coverImage, excerpt }) => {
         </div>
         <ImageDisplay imageName={coverImage} />
         <Card.Body className="dark_blur_bg d-flex flex-column align-items-center justify-content-center">
-          <Card.Text dangerouslySetInnerHTML={{ __html: excerpt(content) }} />
+          <Card.Text
+            dangerouslySetInnerHTML={{ __html: excerpt(description) }}
+          />
         </Card.Body>
         <Card.Footer className="text-muted dark_blur_bg d-flex justify-content-between">
-          
-            <Link to={`/blogspage/${id}`}>Read More</Link>
+          <Link to={`/blogspage/${id}`}>Read More</Link>
         </Card.Footer>
       </Card>
     </>
